@@ -66,14 +66,14 @@ class River:
     def repopulate_fish(self):
         """Models fish reproduction."""
         new_fish: int = (len(self.fish) // 2) * 4
-        for pair_fish in range(0, new_fish):
+        for pair_fish in range(0, new_fish):  # type: ignore
             self.fish.append(Fish())  # adds new fish
         return None
 
     def repopulate_bears(self):
         """Models bear reproduction."""
         new_bears: int = len(self.bears) // 2
-        for pair_bear in range(0, new_bears):
+        for pair_bear in range(0, new_bears):  # type: ignore
             self.bears.append(Bear())  # creates new bear for every two  bears
         return None
 
